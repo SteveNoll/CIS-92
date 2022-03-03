@@ -5,9 +5,9 @@ RUN python3 -m pip install django
 
 COPY app/mysite/ /app
 
-WORKDIR /app/mysite
+WORKDIR /app
 
-ENTRYPOINT ["bash"]
-CMD ["-c", "entrypoint.sh"]
+ENTRYPOINT ["/bin/bash"]
+CMD ["-c", "./entrypoint.sh"]
 
 
