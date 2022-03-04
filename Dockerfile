@@ -10,4 +10,6 @@ WORKDIR /app
 ENTRYPOINT ["/bin/bash"]
 CMD ["-c", "./entrypoint.sh"]
 
-
+ENV DJANGO_ADMIN_USERNAME=Test
+ENV DJANGO_ADMIN_EMAIL=test@test.test
+ENV DJANGO_SUPERUSER_PASSWORD=Test
