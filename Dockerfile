@@ -4,6 +4,7 @@ RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt install -y python3-pip t
 RUN python3 -m pip install django psycopg2-binary
 
 COPY app/mysite/ /app
+RUN mkdir /db
 
 WORKDIR /app
 
@@ -13,3 +14,4 @@ CMD ["-c", "./entrypoint.sh"]
 ENV DJANGO_ADMIN_USERNAME=Test
 ENV DJANGO_ADMIN_EMAIL=test@test.test
 ENV DJANGO_SUPERUSER_PASSWORD=Test
+
